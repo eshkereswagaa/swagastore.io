@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Swaga — стиль жизни </title>
+  <meta name="description" content="Тупая сука, будто питекантроп, На мне мобильный костюм — это Гандам Барби как bando — в ней вся моя банда Я поебал и съебал, будто фантом, эй Молодой Стиви Уандер, эй"./>
+
+  <style>
+    :root{
+      --bg: #120607;
+      --card: #1a0b0b;
+      --accent: linear-gradient(90deg,#ff3b3b,#ff7a7a);
+      --muted: #f0c6c6;
+      --glass: rgba(255,80,80,0.06);
+      --max-w:1100px;
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+      background:
+        radial-gradient(800px 400px at 10% 10%, rgba(255,59,59,0.08), transparent),
+        linear-gradient(180deg, #100406, #0b0506 80%);
+      color:#fff5f5;
+      padding:36px 20px;
+      display:flex; justify-content:center;
+    }
+    .container{width:100%; max-width:var(--max-w)}
+    header{display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:28px}
+    .logo{display:flex; align-items:center; gap:12px}
+    .mark{width:52px; height:52px; border-radius:12px;
+      background: linear-gradient(135deg,#ff3b3b,#ff7a7a);
+      display:flex; align-items:center; justify-content:center; color:#2b0000; font-weight:800;
+      box-shadow:0 8px 24px rgba(255,59,59,0.16)}
+    nav{display:flex; gap:14px}
+    nav a{color:var(--muted); text-decoration:none; font-weight:600}
+    nav a.cta{padding:10px 14px; border-radius:10px; background: #ff3b3b; color:#2b0000}
+
+    .hero{display:grid; grid-template-columns:1fr 420px; gap:26px; align-items:start;
+      padding:22px; border-radius:var(--radius); background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,59,59,0.07); box-shadow:0 10px 30px rgba(10,5,5,0.6)}
+    .hero h1{margin:0 0 8px; font-size:30px}
+    .hero p{margin:0 0 18px; color:var(--muted)}
+    .buttons{display:flex; gap:12px}
+    .btn{padding:10px 14px; border-radius:10px; border:1px solid rgba(255,255,255,0.04); cursor:pointer; font-weight:700; background:transparent; color:inherit}
+    .btn.primary{background:linear-gradient(90deg,#ff3b3b,#ff7a7a); color:#2b0000}
+
+    /* gallery */
+    .gallery{display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; margin-top:18px}
+    .card{background:var(--card); border-radius:12px; overflow:hidden; border:1px solid rgba(255,255,255,0.03)}
+    .card img{display:block; width:100%; height:260px; object-fit:cover}
+    .card .meta{padding:10px}
+    .card .meta h4{margin:0 0 6px; font-size:15px}
+    .card .meta p{margin:0; color:var(--muted); font-size:13px}
+
+    .preview{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:18px; border-radius:12px; border:1px solid rgba(255,255,255,0.03)}
+    .mock{height:260px; border-radius:10px; display:flex; align-items:center; justify-content:center; color:var(--muted); font-weight:600; background: linear-gradient(180deg,#220606,#130405)}
+
+    footer{margin-top:20px; color:var(--muted); display:flex; justify-content:space-between; align-items:center}
+
+    @media (max-width:980px){ .hero{grid-template-columns:1fr} .gallery{grid-template-columns:repeat(2,1fr)} }
+    @media (max-width:600px){ .gallery{grid-template-columns:1fr} nav{display:none} header{flex-direction:column; align-items:flex-start} }
+
+    .tag{padding:6px 10px; border-radius:999px; background:rgba(255,80,80,0.06); color:var(--muted); font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="mark">SW</div>
+        <div>
+          <div style="font-weight:800">SwagaStore</div>
+          <div style="font-size:12px;color:#f0c6c6">SWAGA СПАСАЕТ ЭТОТ МИР.</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#gallery">Галерея</a>
+        <a href="#contact">Контакты</a>
+        <a class="cta" href="#gallery">Купить</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <div>
+        <div class="tag"> Opuim • Swaga • Eskere </div>
+        <h1>не позорься. Купи </h1>
+        <p>  Каждый тебе даст в этой одежде </p>
+
+        <div class="buttons">
+          <button class="btn primary" onclick="downloadSource()">Скачать HTML</button>
+          <button class="btn" onclick="document.getElementById('gallery').scrollIntoView({behavior:'smooth'})">Посмотреть галерею</button>
+        </div>
+
+        <section id="gallery" class="gallery" aria-label="Галерея Swaga">
+          <!-- Карточки: замените src на прямые ссылки на изображения или локальные файлы -->
+          <div class="card">
+            <!-- Пример: источник (пример) — Aliexpress / Harajuku hoodie. Замените на прямую ссылку к картинке. -->
+            <img src="https://i.pinimg.com/736x/1c/58/45/1c584531154b2cda7eeabb5c38bcdd67.jpg" alt="Куртка Opuim"./>
+            <div class="meta"><h4>Куртка style Opuim</h4><p>Тупая с#ка, будто питекантроп, На мне мобильный костюм — это Гандам Барби как bando — в ней вся моя банда Я по#бал и съеб#л, будто фантом, эй Молодой Стиви Уандер, эй.</p></div>
+          </div>
+
+          <div class="card">
+            <!-- Пример: источник — Pinterest swag outfit. -->
+           <img src="https://cdn-ru.bitrix24.ru/b18238482/iblock/3cf/3cf30c59646a46d0d7f924ca9e9bc48c/futbolka-money-makes-money.jpg" alt="Футболка Money Makes Money"./>
+
+            <div class="meta"><h4>Футболька Eshkere</h4><p>A на подс0с3 мазелов</p></div>
+          </div>
+
+          <div class="card">
+            <!-- Пример: источник — labalie / рваные jeans -->
+            <img src="https://i.pinimg.com/1200x/d6/a4/0f/d6a40fe355fac054fe81f6fa2b163324.jpg" alt="Swag jeans 3">
+            <div class="meta"><h4>Бегги-джинсы KORESH</h4><p>Дам те морковку и ты станешь зая Припарковал поезд в твоем пусане Ночью ты отработаешь свидание</p></div>
+          </div>
+
+          <div class="card">
+            <img src="https://i.pinimg.com/1200x/b0/1b/98/b01b981814cc2299b22f3c923cd225df.jpg"alt="Swag look 4">
+            <div class="meta"><h4>Обувь RIZE </h4><p> это первый трек в котором тебя нет но ты со№ешь</p></div>
+          </div>
+
+          <div class="card">
+            <img src="https://i.pinimg.com/1200x/dc/69/2e/dc692ee9382c06db77ba351d43118599.jpg"alt="Swag look 5">
+            <div class="meta"><h4>Бегги-джинсыSWAGA</h4><p>Хочешь раздеться… Стой, не спускайся вниз Залезь мне в сердце, а не в ширинку джинс Горло глушит спирта склянка Ой, вылижи мне душу, нимфоманка</p></div>
+          </div>
+
+          <div class="card">
+            <img src="https://i.pinimg.com/1200x/0c/51/d1/0c51d1b677ee6ae58bae32b4bfc48879.jpg"alt="Swag look 6">
+            <div class="meta"><h4>
+            <h4>Bag for us</h4><p>Я роняю запад</p></div>
+          </div>
+        </section>
+
+        <div style="margin-top:18px">
+          <p style="color:#f0c6c6; font-size:14px"> Я курю один, синий айсберг среди льдин
+Новые кроссы мне сказали: "Fludd'а, ты неотразим"
+Я roll'ю стик, у меня есть стиль до мозгов кости
+Bay, у тебя есть твоя жопа, она нужна, чтоб ей трясти (сука)</p>
+        </div>
+
+      </div>
+
+      <aside class="preview">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px">
+          <div style="font-weight:700">Кто этот гений</div>
+          <div style="color:#f0c6c6; font-size:13px">Swaga Галерея</div>
+        </div>
+        <div class="mock" id="mock">Баратова Шахриза Сиб25-35б</div>
+        <div style="margin-top:12px; display:flex; gap:8px; justify-content:space-between; align-items:center">
+
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> SwagaStore</div>
+      <div style="color:#f0c6c6">Я в очках Louis Vuitton — это не Ray-Ban
+Я звезда в Голливуде — Рональд Рейган
+Я бегу от мусоров, будто Rayman
+И ты хочешь быть со мной, ла-ла-ла, ла-лей </div>
+    </footer>
+  </div>
+
+  <script>
+    // Показ размеров превью
+    function updateMockSize(){
+      const mock = document.getElementById('mock');
+      const rect = mock.getBoundingClientRect();
+      document.getElementById('width').textContent = Math.round(rect.width) + 'px';
+      document.getElementById('height').textContent = Math.round(rect.height) + 'px';
+    }
+    window.addEventListener('load', ()=>{
+      document.getElementById('year').textContent = new Date().getFullYear();
+      updateMockSize();
+      window.addEventListener('resize', updateMockSize);
+    });
+
+    function downloadSource(){
+      const html = `<!doctype html>\n${document.documentElement.outerHTML}`;
+      const blob = new Blob([html], {type:'text/html'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'swaga_index.html'; document.body.appendChild(a);
+      a.click(); a.remove(); URL.revokeObjectURL(url);
+    }
+  </script>
+</body>
+</html>
